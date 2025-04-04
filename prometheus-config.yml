@@ -1,0 +1,10 @@
+global:
+   scrape_interval:     15s # By default, scrape targets every 15 seconds.
+scrape_configs:
+  - job_name: 'local_system'
+    static_configs:
+      - targets: ['localhost:9090']
+alerting:
+  alertmanagers:
+    - static_configs:
+      - targets: ['localhost:9093']
